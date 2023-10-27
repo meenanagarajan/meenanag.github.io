@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Education</title>
+    <style>
+        body {
+            background-color: #000; /* Black background color */
+            color: #fff; /* White text color */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
 
+        .education-title {
+            font-size: 36px;
+            padding: 20px;
+        }
+
+        .education-tile {
+            background-image: url('gt.png'); /* Replace with the actual background image URL */
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Translucent border */
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .education-tile:hover .popup {
+            display: block;
+        }
+
+        .popup {
+            display: none;
+            background-color: #fff; /* White background color */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            color: #000; /* Black text color */
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            border: 2px solid #000; /* Add a border for contrast */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+      .main-heading {
+            font-size: 24px;
+        }
+
+        .sub-heading {
+            font-size: 18px;
+        }
+
+        .small-font {
+            font-size: 12px;
+            color: #444; /*dark gray*/
+        }
+    </style>
+</head>
+<body>
+    <div class="education-title">Education</div>
+
+    <div class="education-tile">
+        <div class="main-heading">Georgia Institute of Technology</div>
+        <div class="sub-heading">B.S. in Computer Science</div>
+        <div class="small-font">GPA: 3.68</div>
+        <div class="popup">
+            <div class="main-heading">Georgia Institute of Technology</div>
+            <div class="sub-heading">B.S. in Computer Science</div>
+            <div class="small-font">GPA: 3.68</div>
+        </div>
+    </div>
+
+    <div class="education-tile">
+        <div class="main-heading">Georgia Institute of Technology</div>
+        <div class="sub-heading">M.S. in Computer Science (Machine Learning)</div>
+        <div class="small-font">Graduation: Dec 2023</div>
+        <div class="small-font">GPA: N/A</div>
+        <div class="popup">
+            <div class="main-heading">Georgia Institute of Technology</div>
+            <div class="sub-heading">M.S. in Computer Science (Machine Learning)</div>
+            <div class="small-font">Graduation: Dec 2023</div>
+            <div class="small-font">GPA: N/A</div>
+            <div class="small-font">Selected Coursework: Data Structures and Algorithms, Design and Analysis of Algorithms, Introduction to AI, Human Computer Interaction, Automata and Complexity, Introduction to Discrete Math, Objects and Design, Computer Organization and Programming, and Applied Combinatorics, Machine Learning, Introduction to Com- puter Vision.</div>
+            
+        </div>
+    </div>
+
+  <div class="education-tile">
+        <div class="main-heading">Georgia Institute of Technology</div>
+        <div class="sub-heading">M.S. in Computer Science (Machine Learning)</div>
+        <div class="small-font">Expected Graduation: Dec 2024</div>
+        <div class="small-font">GPA: N/A</div>
+        <div class="popup">
+            <div class="main-heading">Georgia Institute of Technology</div>
+            <div class="sub-heading">M.S. in Computer Science</div>
+            <div class="small-font">GPA: N/A</div>
+            <div class="small-font">Specialization in Machine Learning</div>
+        </div>
+    </div>
+
+    <script>
+        const educationTiles = document.querySelectorAll('.education-tile');
+
+        educationTiles.forEach(tile => {
+            tile.addEventListener('click', () => {
+                tile.querySelector('.popup').style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
