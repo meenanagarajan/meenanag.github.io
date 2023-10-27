@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Meena Nagarajan</title>
+    <meta charset="UTF-8">
+    <title>Your Name - Personal Website</title>
     <style>
         body {
-            background-color: #1e2a78; /* Dark blue background color */
-            color: white; /* Text color */
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
         }
 
-        #header {
+        header {
+            background-color: #333;
+            color: #fff;
             text-align: center;
             padding: 20px;
         }
 
-        #header h1 {
-            font-size: 36px;
-        }
-
-        #links {
+        nav {
+            background-color: #444;
             text-align: center;
-            margin-top: 30px;
         }
 
-        #links a {
+        nav a {
             text-decoration: none;
-            color: #FFA500; /* Orange link color */
+            color: #fff;
             margin: 10px;
         }
 
-        /* Add CSS for buttons */
-        .button {
-            background-color: #FFA500; /* Orange button color */
-            color: white;
-            padding: 10px 20px;
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 10px;
-            cursor: pointer;
-            border: none;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <div id="header">
-        <h1>Meena Nagarajan</h1>
-    </div>
+    <header>
+        <h1>Your Name</h1>
+        <p>Welcome to My Personal Website</p>
+    </header>
 
-    <div id="links">
-        <a href="https://www.linkedin.com/in/meena-nagarajan/" target="_blank">LinkedIn</a>
-        <a href="mailto:your.email@example.com">Email</a>
-        <a href="your-resume.pdf" target="_blank">Resume</a>
-        
-        <!-- Add buttons for Education, Projects, and Experience -->
-        <button class="button" onclick="location.href='education.html'">Education</button>
-        <button class="button" onclick="location.href='projects.html'">Projects</button>
-        <button class="button" onclick="location.href='experience.html'">Experience</button>
-    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section>
+        <h2>About Me</h2>
+        <p>Write a brief introduction about yourself here.</p>
+    </section>
+
+    <section>
+        <h2>My Portfolio</h2>
+        <p>Showcase your projects and work here.</p>
+    </section>
+
+    <section>
+        <h2>Contact Me</h2>
+        <p>You can reach me at your.email@example.com</p>
+    </section>
+
+    <footer>
+        &copy; 2023 Your Name
+    </footer>
 </body>
 </html>
