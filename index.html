@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
     <title>Your Name - Personal Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #fff; /* White background color */
+            color: #000; /* Black text color */
             margin: 0;
             padding: 0;
         }
@@ -14,13 +14,16 @@
         header {
             background-color: #333;
             color: #fff;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
         }
 
         nav {
             background-color: #444;
             text-align: center;
+            flex: 1; /* Takes up remaining horizontal space */
         }
 
         nav a {
@@ -39,34 +42,62 @@
             text-align: center;
             padding: 10px;
         }
+
+        /* New CSS for the teal green box */
+        .header-box {
+            background-color: #008080; /* Teal green box color */
+            color: #fff;
+            text-align: left;
+            padding: 20px;
+            width: 70%;
+        }
+
+        .header-box h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .header-box a {
+            text-decoration: none;
+            color: #fff;
+            margin: 10px;
+        }
+
+        /* New CSS for the image */
+        .profile-image {
+            width: 30%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .profile-image img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>Welcome to My Personal Website</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="projects.html">Projectsk;hj</a>
+        </nav>
+        <div class="header-box">
+            <h1>Your Name</h1>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+            <a href="mailto:your.email@example.com">Email</a>
+            <a href="your-resume.pdf" target="_blank">Resume</a>
+        </div>
+        <div class="profile-image">
+            <img src="your-image.jpg" alt="Your Image">
+        </div>
     </header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
-    </nav>
 
     <section>
         <h2>About Me</h2>
         <p>Write a brief introduction about yourself here.</p>
-    </section>
-
-    <section>
-        <h2>My Portfolio</h2>
-        <p>Showcase your projects and work here.</p>
-    </section>
-
-    <section>
-        <h2>Contact Me</h2>
-        <p>You can reach me at your.email@example.com</p>
     </section>
 
     <footer>
