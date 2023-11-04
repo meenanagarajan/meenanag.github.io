@@ -796,6 +796,70 @@ a:focus {
   cursor: pointer;
 }
 
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns in the top row */
+  gap: 10px; /* Gap between tiles */
+}
+.bottom-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns in the bottom row */
+  gap: 10px; /* Gap between tiles */
+}
+.project-tile {
+  /* Use a background image for each tile */
+  width: 350px; /* Custom width for each tile */
+  height: 250px; /* Custom height for each tile */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/vr.jpeg'); /* Set the background image for the first tile */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center; 
+  margin-bottom: 20px; /* Add margin between the tiles */
+  border: 2px solid rgba(0, 0, 0, 0.10)
+}
+
+/* Define background images for other tiles */
+.project-tile:nth-child(2) {
+  background-image: url('../images/heart.jpeg');
+}
+.project-tile:nth-child(3) {
+  background-image: url('../images/chat.jpeg');
+}
+.bottom-project-tile {
+  /* Use a background image for each tile */
+  width: 350px; /* Custom width for each tile */
+  height: 250px; /* Custom height for each tile */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/tower.jpeg'); /* Set the background image for the first tile */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center; 
+  margin-bottom: 20px; /* Add margin between the tiles */
+  border: 2px solid rgba(0, 0, 0, 0.10)
+}
+.bottom-project-tile:nth-child(2) {
+  background-image: url('../images/productiviti.jpeg');
+} 
+.bottom-project-tile:nth-child(3) {
+  background-image: url('../images/productiviti.jpeg');
+}
 h2 {
   font-family: Libre Franklin;
   font-size: 24px;
