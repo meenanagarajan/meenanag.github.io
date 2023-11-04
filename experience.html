@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Meena Nagarajan</title>
+
+  <!-- slider stylesheet -->
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+a
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              MN
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                 
+		<li class="nav-item">
+                  <a class="nav-link" href="education.html"> Education </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="experience.html"> Experience </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="projects.html"> Projects </a>
+                </li>
+                 
+              </ul>
+              
+               
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- do section -->
+
+  <section class="do_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Experience
+        </h2>
+        
+      </div>
+
+      <div class="experience-container">
+        <div class="experience-tile" data-popup="popup-1">
+            <h2>Siemens Digital Industries Sotware</h2> 
+            <h3>Software Engineering Intern</h3>
+            <h4>Huntsville, Alabama</h4>
+            <h4>Jan 2023 - Present</h4> 
+        </div>
+        <div class="experience-tile" data-popup="popup-2">
+          <h2>Robotics and Intelligent Machines Center</h2>
+          <h3>Undergraduate Researcher</h3>
+          <h4>Atlanta, GA</h4>
+          <h4>Jan 2022 - May 2023</h4> 
+        </div>
+        <div class="experience-tile" data-popup="popup-3">
+          <h2>Georgia Institute of Technology</h2>
+          <h3>Undergraduate Teaching Assistant</h3>
+          <h4>Atlanta, GA</h4>
+          <h4>Jan 2022 - Dec 2022</h4>
+        </div>
+      </div>
+      <div id="popup-1" class="experience-popup">
+        <div class="experience-popup-content">
+            <span class="close-popup" data-popup="popup-1">&times;</span>
+            <ul>
+              <li>Orchestrated automation of performance tests, managing 600 concurrent client applications leading to a 30% increase in effciency.</li>
+              <li>Engineered a Python-based filter, driving a 35% boost in data-driven decision-making by extracting insights from server deployments and load generation.</li>
+              <li>Devised an innovative Python script automating load generator management, achieving a 40% increase in load allocation efficiency.</li>
+          </ul>
+        </div>
+    </div>
+    <div id="popup-2" class="experience-popup">
+        <div class="experience-popup-content">
+            <span class="close-popup" data-popup="popup-2">&times;</span>
+            <ul>
+              <li>Evaluated and enhanced a cutting-edge autonomous moored profiler, pivotal in assessing Prince William Sound's recovery.</li>
+              <li>Leveraged advanced CNNs such as InceptionV3 and Xception to process and discern underwater images of plankton and salmon.</li>
+              <li>Achieved an impressive 98.87% reduction in training time, optimizing effciency from 6 hours to a mere 4 minutes which enabled seamless adaptation of the model to accommodate custom data.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="popup-3" class="experience-popup">
+      <div class="experience-popup-content">
+          <span class="close-popup" data-popup="popup-3">&times;</span>
+          <ul>
+            <li>Developed curriculum materials, assessed assignments, quizzes/exams, and projects for the discrete math course (CS 2050). </li>
+            <li>Provided comprehensive support to a diverse cohort of 500 degree-seeking students through dedicated office hours and dynamic weekly group mentoring sessions.</li> 
+        </ul>
+      </div>
+  </div>
+    </div>
+  </section>
+
+  <!-- end do section -->
+ 
+<script>
+  const experienceTiles = document.querySelectorAll('.experience-tile');
+
+  // Add click event listeners to each experience tile
+  experienceTiles.forEach(tile => {
+      tile.addEventListener('click', () => {
+          const popupId = tile.getAttribute('data-popup');
+          const popup = document.getElementById(popupId);
+          popup.style.display = 'block';
+      });
+  });
+
+  // Get all close buttons
+  const closeButtons = document.querySelectorAll('.close-popup');
+
+  // Add click event listeners to each close button
+  closeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          const popupId = button.getAttribute('data-popup');
+          const popup = document.getElementById(popupId);
+          popup.style.display = 'none';
+      });
+  });
+</script>
+</body>
+
+</html>
