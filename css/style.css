@@ -727,12 +727,17 @@ a:focus {
   text-align: center;
   width: 48%;
   margin-bottom: 20px; /* Add margin between the tiles */
-  border: 2px solid rgba(0, 0, 0, 0.10)
+  border: 2px solid rgba(0, 0, 0, 0.10);
+  cursor: pointer;
 }
 
 /* Define background images for other tiles */
 .education-tile:nth-child(2) {
   background-image: url('../images/tech.jpeg');
+}
+
+.education-tile:hover {
+  transform: scale(1.05); /* Slightly enlarge the tile on hover */
 }
 
 .experience-container {
@@ -754,7 +759,8 @@ a:focus {
   text-align: center;
   width: 48%;
   margin-bottom: 20px; /* Add margin between the tiles */
-  border: 2px solid rgba(0, 0, 0, 0.10)
+  border: 2px solid rgba(0, 0, 0, 0.10);
+  cursor: pointer;
 }
 
 /* Define background images for other tiles */
@@ -763,6 +769,9 @@ a:focus {
 }
 .experience-tile:nth-child(3) {
   background-image: url('../images/coc.jpeg');
+}
+.experience-tile:hover {
+  transform: scale(1.05); /* Slightly enlarge the tile on hover */
 }
 
 .experience-popup {
@@ -860,9 +869,15 @@ a:focus {
   background-image: url('../images/productiviti.jpeg');
 } 
 .bottom-project-tile:nth-child(3) {
-  background-image: url('../images/productiviti.jpeg');
+  background-image: url('../images/aqua.jpeg');
 }
 
+.project-tile:hover {
+  transform: scale(1.05); /* Slightly enlarge the tile on hover */
+}
+.bottom-project-tile:hover {
+  transform: scale(1.05); /* Slightly enlarge the tile on hover */
+}
 h2 {
   font-family: Libre Franklin;
   font-size: 24px;
