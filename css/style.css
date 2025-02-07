@@ -70,11 +70,10 @@ body {
 
 /*header section*/
 .hero_area {
-  height: 100vh;
-  background-color: #b5caee;
-  background-image: url(../images/hero-bg.jpg);
-  background-size: cover;
+  background: white; /* Sets a plain white background */
+  min-height: 100vh; /* Ensures it covers the full viewport height */
 }
+
 
 .sub_page .hero_area {
   height: auto;
