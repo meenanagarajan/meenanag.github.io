@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  color: #000000;
+  color: white;
   background-color: #000000;
 }
 
@@ -70,7 +70,7 @@ body {
 
 /*header section*/
 .hero_area {
-  background: white; /* Sets a plain white background */
+  background: black; /* Sets a plain white background */
   min-height: 100vh; /* Ensures it covers the full viewport height */
 }
 
