@@ -1,197 +1,470 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <title>Meena Nagarajan | Experience</title>
 
-  <title>Meena Nagarajan</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- slider stylesheet -->
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background: #f9fafc;
+      color: #333;
+    }
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+    .page-wrapper {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @media(min-width: 768px) {
+      .page-wrapper {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+    }
+
+    @media(min-width: 1200px) {
+      .page-wrapper {
+        padding-left: 120px;
+        padding-right: 120px;
+      }
+    }
+
+    /* Navbar */
+    .header_section {
+      background: #ffffff;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+      padding: 0.5rem 0;
+    }
+
+    .navbar-brand span {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #2b2b2b;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #555;
+      margin: 0 0.5rem;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-item.active .nav-link {
+      color: #6a11cb;
+    }
+
+    /* Hero Section */
+    .hero_section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30vh;
+      background: linear-gradient(135deg, #d9c6f5 0%, #ffffff 100%);
+      color: #2b2b2b;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .hero_section h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero_section p {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Timeline Section */
+    .experience_section {
+      padding: 4rem 0;
+      background: #ffffff;
+    }
+
+    .experience_section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #2b2b2b;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 0;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #d9c6f5;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .timeline-item {
+      padding: 1rem 2rem;
+      position: relative;
+      width: 50%;
+      cursor: pointer;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: #6a11cb;
+      border: 4px solid #fff;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .timeline-item:nth-child(even)::after {
+      left: -10px;
+    }
+
+    .timeline-content {
+      padding: 1.2rem;
+      background: #f4f6f8;
+      position: relative;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .timeline-content h3 {
+      color: #6a11cb;
+    }
+
+    .timeline-content h5 {
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-content p {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        margin-bottom: 2rem;
+      }
+
+      .timeline-item::after {
+        left: 50%;
+      }
+    }
+
+    /* Popup Styles */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup-content {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      text-align: left;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .popup-content h4 {
+      margin-bottom: 1rem;
+      color: #6a11cb;
+    }
+
+    .popup-content ul {
+      padding-left: 1.2rem;
+      color: #555;
+    }
+
+    .popup-content ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
-<body class="sub_page">
+<body>
   <div class="hero_area">
-    <!-- header section strats -->
+    <!-- Header -->
     <header class="header_section">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              MN
-            </span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-light px-5">
+          <a class="navbar-brand" href="index.html"><span>MN</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                 
-		<li class="nav-item">
-                  <a class="nav-link" href="education.html"> Education </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="experience.html"> Experience </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="projects.html"> Projects </a>
-                </li>
-                 
-              </ul>
-              
-               
-            </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+              <li class="nav-item active"><a class="nav-link" href="experience.html">Experience</a></li>
+              <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            </ul>
           </div>
         </nav>
       </div>
     </header>
-    <!-- end header section -->
+
+    <!-- Hero Section -->
+    <section class="hero_section">
+      <div class="container">
+        <h1>Experience</h1>
+        <p>Professional journey & contributions</p>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience_section">
+      <div class="container page-wrapper">
+        <div class="timeline">
+          <!-- Timeline Items -->
+          <div class="timeline-item" data-points="popup-6">
+            <div class="timeline-content">
+              <h3>Reframe</h3>
+              <h5>Product Engineer – Ultra Team</h5>
+              <h5>Atlanta, GA</h5>
+              <p>Jul 2025 – Present</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-points="popup-7">
+            <div class="timeline-content">
+              <h3>L&T Technology Services</h3>
+              <h5>Full Stack Development Intern</h5>
+              <h5>Dallas, TX</h5>
+              <p>Feb 2025 – Jul 2025</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-points="popup-4">
+            <div class="timeline-content">
+              <h3>Georgia Institute of Technology</h3>
+              <h5>Graduate Teaching Assistant</h5>
+              <h5>Atlanta, GA</h5>
+              <p>Aug 2024 - Present</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-points="popup-2">
+            <div class="timeline-content">
+              <h3>Siemens Digital Industries Software</h3>
+              <h5>Software Engineering Intern</h5>
+              <h5>Huntsville, Alabama</h5>
+              <p>May 2024 - Aug 2024</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-points="popup-1">
+            <div class="timeline-content">
+              <h3>Siemens Digital Industries Software</h3>
+              <h5>Software Engineering Intern</h5>
+              <h5>Huntsville, Alabama</h5>
+              <p>Jan 2023 - Dec 2023</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-points="popup-3">
+            <div class="timeline-content">
+              <h3>Robotics and Intelligent Machines Center</h3>
+              <h5>Undergraduate Researcher</h5>
+              <h5>Atlanta, GA</h5>
+              <p>Jan 2022 - May 2023</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-points="popup-5">
+            <div class="timeline-content">
+              <h3>Georgia Institute of Technology</h3>
+              <h5>Undergraduate Teaching Assistant</h5>
+              <h5>Atlanta, GA</h5>
+              <p>Jan 2022 - Dec 2022</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
-  <!-- do section -->
-
-  <section class="do_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Experience
-        </h2>
-        
-      </div>
-      <div class="experience-container">
-        <div class="experience-tile" data-popup="popup-1">
-            <h2>Siemens Digital Industries Sotware</h2> 
-            <h3>Software Engineering Intern</h3>
-            <h4>Huntsville, Alabama</h4>
-            <h4>May 2024 - Aug 2024</h4> 
-      </div>
-      <div class="experience-container">
-        <div class="experience-tile" data-popup="popup-1">
-            <h2>Siemens Digital Industries Sotware</h2> 
-            <h3>Software Engineering Intern</h3>
-            <h4>Huntsville, Alabama</h4>
-            <h4>Jan 2023 - Dec 2023</h4> 
-        </div>
-        <div class="experience-tile" data-popup="popup-2">
-          <h2>Robotics and Intelligent Machines Center</h2>
-          <h3>Undergraduate Researcher</h3>
-          <h4>Atlanta, GA</h4>
-          <h4>Jan 2022 - May 2023</h4> 
-        </div>
-        <div class="experience-tile" data-popup="popup-3">
-          <h2>Georgia Institute of Technology</h2>
-          <h3>Graduate Teaching Assistant</h3>
-          <h4>Atlanta, GA</h4>
-          <h4>Aug 2024 - Present</h4>
-        </div>
-	<div class="experience-tile" data-popup="popup-3">
-          <h2>Georgia Institute of Technology</h2>
-          <h3>Undergraduate Teaching Assistant</h3>
-          <h4>Atlanta, GA</h4>
-          <h4>Jan 2022 - Dec 2022</h4>
-        </div>
-      </div>
-      <div id="popup-1" class="experience-popup">
-        <div class="experience-popup-content">
-            <span class="close-popup" data-popup="popup-1">&times;</span>
-            <ul>
-              <li>Enhanced Xpedition Layout, a cutting-edge PCB design tool, by integrating advanced Python-based automations.</li>
-              <li>Developed an ANTLR-based script to automate the conversion of over 1,000 VBScript automation scripts to Python, optimizing foundational libraries and translation processes.</li>
-              <li>Led Python-based process automation integration into the future code branch, ensuring compatibility and stability.</li>
-          </ul>
-        </div>
+  <!-- Popups -->
+  <div id="popup-1" class="popup-overlay">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <h4>Siemens Digital Industries Software | Jan 2023 - Dec 2023</h4>
+      <ul>
+        <li>Orchestrated automation of performance tests for 600 concurrent client applications, increasing efficiency by 30%.</li>
+        <li>Engineered Python-based filters to boost data-driven decision-making by 35%.</li>
+        <li>Developed a VBScript-to-Python automation converter using ANTLR for internal tool modernization.</li>
+      </ul>
     </div>
-      <div id="popup-2" class="experience-popup">
-        <div class="experience-popup-content">
-            <span class="close-popup" data-popup="popup-2">&times;</span>
-            <ul>
-              <li>Orchestrated automation of performance tests, managing 600 concurrent client applications leading to a 30% increase in effciency.</li>
-              <li>Engineered a Python-based filter, driving a 35% boost in data-driven decision-making by extracting insights from server deployments and load generation.</li>
-              <li>Devised an innovative Python script automating load generator management, achieving a 40% increase in load allocation efficiency.</li>
-          </ul>
-        </div>
-    </div>
-    <div id="popup-3" class="experience-popup">
-        <div class="experience-popup-content">
-            <span class="close-popup" data-popup="popup-3">&times;</span>
-            <ul>
-              <li>Evaluated and enhanced a cutting-edge autonomous moored profiler, pivotal in assessing Prince William Sound's recovery.</li>
-              <li>Leveraged advanced CNNs such as InceptionV3 and Xception to process and discern underwater images of plankton and salmon.</li>
-              <li>Achieved an impressive 98.87% reduction in training time, optimizing effciency from 6 hours to a mere 4 minutes which enabled seamless adaptation of the model to accommodate custom data.</li>
-            </ul>
-        </div>
-    </div>
-    <div id="popup-4" class="experience-popup">
-      <div class="experience-popup-content">
-          <span class="close-popup" data-popup="popup-4">&times;</span>
-          <ul>
-            <li>Guided students through complex computer vision concepts, offering comprehensive support in understanding algorithms, image processing techniques, deep learning models, and practical machine learning applications..</li>
-            <li>Assisted in developing course materials, grading assignments, and conducting review sessions for 500 students</li> 
-        </ul>
-      </div>
   </div>
-    <div id="popup-5" class="experience-popup">
-      <div class="experience-popup-content">
-          <span class="close-popup" data-popup="popup-5">&times;</span>
-          <ul>
-            <li>Developed curriculum materials, assessed assignments, quizzes/exams, and projects for the discrete math course (CS 2050). </li>
-            <li>Provided comprehensive support to a diverse cohort of 500 degree-seeking students through dedicated office hours and dynamic weekly group mentoring sessions.</li> 
-        </ul>
-      </div>
-  </div>
+
+  <div id="popup-2" class="popup-overlay">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <h4>Siemens Digital Industries Software | May 2024 - Aug 2024</h4>
+      <ul>
+        <li>Enhanced PCB design tools for client deployment, integrating new backend APIs and improving load performance.</li>
+        <li>Optimized test framework for complex multi-threaded systems to increase reliability and reduce runtime.</li>
+        <li>Documented onboarding procedures for new interns and shared reusable automation scripts across teams.</li>
+      </ul>
     </div>
-  </section>
+  </div>
 
-  <!-- end do section -->
- 
-<script>
-  const experienceTiles = document.querySelectorAll('.experience-tile');
+  <div id="popup-3" class="popup-overlay">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <h4>Robotics and Intelligent Machines Center | Jan 2022 - May 2023</h4>
+      <ul>
+        <li>Contributed to autonomous driving simulation data processing pipelines.</li>
+        <li>Worked on VR environment integration for self-driving car training experiments.</li>
+      </ul>
+    </div>
+  </div>
 
-  // Add click event listeners to each experience tile
-  experienceTiles.forEach(tile => {
-      tile.addEventListener('click', () => {
-          const popupId = tile.getAttribute('data-popup');
-          const popup = document.getElementById(popupId);
-          popup.style.display = 'block';
+  <div id="popup-4" class="popup-overlay">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <h4>Georgia Institute of Technology | Aug 2024 - Present</h4>
+      <ul>
+        <li>Guided students in computer vision, deep learning models, and image processing.</li>
+        <li>Developed course materials, graded assignments, and conducted review sessions for 500 students.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup-5" class="popup-overlay">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <h4>Georgia Institute of Technology | Jan 2022 - Dec 2022</h4>
+      <ul>
+        <li>Assisted undergraduate students in labs and assignments for Computer Vision and Programming courses.</li>
+        <li>Helped clarify complex coding concepts and grading assignments consistently.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup-6" class="popup-overlay">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <h4>Reframe | Jul 2025 – Present</h4>
+      <ul>
+        <li>Contributed to Reframe’s <strong>Ultra coaching platform</strong> to track client health metrics and manage 1-1 coaching sessions.</li>
+        <li>Engineered dashboards with <strong>React, TypeScript, React Query</strong>, improving responsiveness and load times by 35%.</li>
+        <li>Integrated backend services including <strong>NestJS, PostgreSQL, AWS S3, Stream, and Stripe</strong> for secure coaching workflows.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="popup-7" class="popup-overlay">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <h4>L&T Technology Services | Feb 2025 – Jul 2025</h4>
+      <ul>
+        <li>Modernized internal admin app with <strong>Azure AD authentication</strong> and role-based access control.</li>
+        <li>Led database migration from <strong>Oracle SQL</strong> to <strong>PostgreSQL</strong>, improving reliability and maintainability.</li>
+        <li>Collaborated with cross-functional teams for client support and enhancement delivery.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Show popup when timeline item is clicked
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const popupId = item.getAttribute('data-points');
+        document.getElementById(popupId).style.display = 'flex';
       });
-  });
+    });
 
-  // Get all close buttons
-  const closeButtons = document.querySelectorAll('.close-popup');
+    // Close popup
+    const closeButtons = document.querySelectorAll('.popup-close');
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.parentElement.parentElement.style.display = 'none';
+      });
+    });
 
-  // Add click event listeners to each close button
-  closeButtons.forEach(button => {
-      button.addEventListener('click', () => {
-          const popupId = button.getAttribute('data-popup');
-          const popup = document.getElementById(popupId);
+    // Close when clicking outside content
+    const popups = document.querySelectorAll('.popup-overlay');
+    popups.forEach(popup => {
+      popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
           popup.style.display = 'none';
+        }
       });
-  });
-</script>
+    });
+  </script>
 </body>
 
 </html>

@@ -1,132 +1,411 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <title>Meena Nagarajan | Projects</title>
 
-  <title>Meena Nagarajan</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- slider stylesheet -->
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background: #f9fafc;
+      color: #333;
+    }
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+    /* Navbar */
+    .header_section {
+      background: #ffffff;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+      padding: 0.5rem 0;
+    }
+
+    .navbar-brand span {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #2b2b2b;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #555;
+      margin: 0 0.5rem;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-item.active .nav-link {
+      color: #6a11cb;
+    }
+
+    /* Hero Section */
+    .hero_section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30vh;
+      background: linear-gradient(135deg, #d9c6f5 0%, #ffffff 100%);
+      color: #2b2b2b;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .hero_section h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero_section p {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Projects Section */
+    .projects_section {
+      padding: 4rem 1rem;
+      background: #ffffff;
+    }
+
+    .projects_section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #2b2b2b;
+    }
+
+    .card {
+      border-radius: 15px;
+      background: #f4f6f8;
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-body h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: #6a11cb;
+    }
+
+    /* Popup Styles */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      width: 500px;
+      max-width: 90%;
+      text-align: left;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+
+    .popup-content h4 {
+      margin-bottom: 1rem;
+      color: #2b2b2b;
+    }
+
+    .popup-content ul {
+      padding-left: 1.2rem;
+      color: #444;
+    }
+
+    .popup-content ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #666;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .hero_section h1 {
+        font-size: 2rem;
+      }
+
+      .hero_section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 
-<body class="sub_page">
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              MN
-            </span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+<body>
+  <!-- Header -->
+  <header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light px-5">
+        <a class="navbar-brand" href="index.html"><span>MN</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+            <li class="nav-item active"><a class="nav-link" href="projects.html">Projects</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                 
-		<li class="nav-item">
-                  <a class="nav-link" href="education.html"> Education </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="experience.html"> Experience </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="projects.html"> Projects </a>
-                </li>
-                 
-              </ul>
-              
-               
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
-
-
-  <!-- work section -->
-  <section class="work_section layout_padding">
+  <!-- Hero Section -->
+  <section class="hero_section">
     <div class="container">
-      <div class="heading_container">
-        <h2>
-          PROJECTS
-        </h2>
-         
-      </div>
-      <div class="project-container">
-        <div class="project-tile" onclick="window.location.href = 'http://sonify.psych.gatech.edu/';">
-            <h2>VR Training for self-driving cars</h2> 
-          </div>
-        <div class="project-tile" onclick="window.location.href = 'https://github.com/meenanagarajan/Heart-Disease-Predictor';">
-          <h2>Heart Disease Predictor</h2> 
-        </div>
-        <div class="project-tile" onclick="window.location.href = 'https://github.com/meenanagarajan/MeeChat';">
-          <h2>MeeChat</h2> 
-        </div>
-      </div>
-      <div class="bottom-row">
-        <div class="bottom-project-tile" onclick="window.location.href = 'https://github.com/meenanagarajan/TowerDefense';">
-          <h2>Tower Defense</h2> 
-        </div>
-        <div class="bottom-project-tile" onclick="window.location.href = 'https://github.com/meenanagarajan/Productiviti';">
-          <h2>Productiviti</h2> 
-        </div> 
-        <div class="bottom-project-tile" onclick="window.location.href = 'https://www.vip.gatech.edu/teams/vpe';">
-          <h2>Prince William Profiler</h2>  
-        </div> 
-      </div>
-    
-      <!-- <div class="work_container layout_padding2">
-        <div class="box b-1">
-          <img src="images/w-1.png" alt="">
-        </div>
-        <div class="box b-2">
-          <img src="images/w-2.png" alt="">
-
-        </div>
-        <div class="box b-3">
-          <img src="images/w-3.png" alt="">
-
-        </div>
-        <div class="box b-4">
-          <img src="images/w-4.png" alt="">
-
-        </div> -->
-      </div>
+      <h1>Projects</h1>
+      <p>Some of my recent work and personal projects</p>
     </div>
   </section>
 
-  <!-- end work section -->
- 
+  <section class="projects_section">
+    <div class="container">
+      <div class="row">
+        <!-- Project Tiles -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 project-card" data-points="popup-1">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+              <h3>American Sign Language Detection Model</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 project-card" data-points="popup-2">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+              <h3>Disaggregated LLM Scheduling</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 project-card" data-points="popup-3">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+              <h3>Personalized Music Recommendation System</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 project-card" data-points="popup-4">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+              <h3>VR Training for Self-Driving Cars</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 project-card" data-points="popup-5">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+              <h3>Heart Disease Predictor</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 project-card" data-points="popup-6">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+              <h3>MeeChat</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 project-card" data-points="popup-7">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+              <h3>Tower Defense</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 project-card" data-points="popup-8">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+              <h3>Productiviti</h3>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 project-card" data-points="popup-9">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+              <h3>Prince William Profiler</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Popups -->
+<div id="popup-1" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <h4>American Sign Language Detection Model</h4>
+    <ul>
+      <li>Built a CNN-based encoder-decoder model with OpenPose for pose estimation.</li>
+      <li>Implemented Transformer-based model to recognize ASL gestures.</li>
+      <li>Deployed a web demo for real-time gesture detection.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="popup-2" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <h4>Disaggregated LLM Scheduling</h4>
+    <ul>
+      <li>Developed a scheduler to optimize large language model task execution across multiple GPUs.</li>
+      <li>Improved throughput by 40% and reduced latency in multi-GPU setups.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="popup-3" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <h4>Personalized Music Recommendation System</h4>
+    <ul>
+      <li>Built a content-based and collaborative filtering hybrid recommendation engine.</li>
+      <li>Integrated user listening history for personalized playlists.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="popup-4" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <h4>VR Training for Self-Driving Cars</h4>
+    <ul>
+      <li>Developed VR simulations for autonomous vehicle training scenarios.</li>
+      <li>Implemented real-time environment interaction using Unity and Python-based backend analytics.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="popup-5" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <h4>Heart Disease Predictor</h4>
+    <ul>
+      <li>Built a predictive model using patient health data and ML algorithms.</li>
+      <li>Achieved 87% accuracy in detecting high-risk heart conditions.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="popup-6" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <h4>MeeChat</h4>
+    <ul>
+      <li>Created a real-time chat application with React and Firebase.</li>
+      <li>Implemented user authentication and message encryption.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="popup-7" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <h4>Tower Defense</h4>
+    <ul>
+      <li>Developed a tower defense game using Unity with multiple levels and upgrade mechanics.</li>
+      <li>Implemented AI for enemy pathfinding and tower targeting.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="popup-8" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <h4>Productiviti</h4>
+    <ul>
+      <li>Built a productivity tracking web app using React and TypeScript.</li>
+      <li>Implemented task management, streak tracking, and analytics dashboard.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="popup-9" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    <h4>Prince William Profiler</h4>
+    <ul>
+      <li>Created a data visualization tool for historical profiles using D3.js.</li>
+      <li>Displayed timeline events, achievements, and social connections interactively.</li>
+    </ul>
+  </div>
+</div>
+
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Open popup on card click
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const popupId = card.getAttribute('data-points');
+        document.getElementById(popupId).style.display = 'flex';
+      });
+    });
+
+    // Close popup
+    document.querySelectorAll('.popup-close').forEach(closeBtn => {
+      closeBtn.addEventListener('click', (e) => {
+        e.target.closest('.popup-overlay').style.display = 'none';
+      });
+    });
+
+    // Close popup if clicking outside the content
+    document.querySelectorAll('.popup-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          overlay.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
